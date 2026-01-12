@@ -3,13 +3,15 @@
 
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="agnosterzak"
+ZSH_THEME="alanpeabody"
 
 plugins=( 
     git
     dnf
     zsh-autosuggestions
     zsh-syntax-highlighting
+    python
+    pip
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -40,3 +42,9 @@ alias l='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
+eval "$(~/.local/bin/mise activate zsh)"
+
+# Custom Aliases
+alias projects='cd ~/Área\ de\ trabalho/projects' # Entrar na pasta de projetos pessoais
+alias work='cd ~/Área\ de\ trabalho/work'    # Entrar na pasta de projetos de trabalho
+
