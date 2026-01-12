@@ -17,17 +17,17 @@ fi
 
 
 printf "${NOTE} Cloning and Installing ${SKY_BLUE}KooL's Hyprland Dots${RESET}....\n"
-# Check if Hyprland-Dots exists
-if [ -d Hyprland-Dots ]; then
-  cd Hyprland-Dots
+# Check if Hyprland-Dots-Victor exists
+if [ -d Hyprland-Dots-Victor ]; then
+  cd Hyprland-Dots-Victor
   git stash && git pull
   chmod +x copy.sh
-  ./copy.sh 
+  ./copy.sh
 else
-  if git clone --depth=1 https://github.com/JaKooLit/Hyprland-Dots; then
-    cd Hyprland-Dots || exit 1
+  if git clone --depth=1 https://github.com/VictorVilelaSilva/Hyprland-Dots-Victor; then
+    cd Hyprland-Dots-Victor || exit 1
     chmod +x copy.sh
-    ./copy.sh 
+    ./copy.sh
   else
     echo -e "$ERROR Can't download ${YELLOW}KooL's Hyprland-Dots${RESET} . Check your internet connection"
   fi

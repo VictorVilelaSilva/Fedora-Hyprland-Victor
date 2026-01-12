@@ -44,3 +44,6 @@ rog="OFF"
 
 ###-Download and Add pre-configured Hyprland dotfiles?
 dots="ON"
+
+###-Install development environment (PHP, Docker, VS Code, Teams, Postman)?
+dev_env="OFF"

@@ -113,6 +113,7 @@ rog="OFF"
 dots="OFF"
 input_group="OFF"
 nvidia="OFF"
+dev_env="OFF"
 
 # Function to load preset file
 load_preset() {
@@ -208,6 +209,7 @@ options_command+=(
     "pokemon" "Add Pokemon color scripts to your terminal?" "OFF"
     "rog" "Are you installing on Asus ROG laptops?" "OFF"
     "dots" "Download and install pre-configured KooL Hyprland dotfiles?" "OFF"
+    "dev_env" "Install development environment (PHP, Docker, VS Code, Teams, Postman)?" "OFF"
 )
 
 # Capture the selected options before the while loop starts
@@ -360,6 +362,10 @@ for option in "${options[@]}"; do
         dots)
             echo "${INFO} Installing pre-configured ${SKY_BLUE}KooL Hyprland dotfiles...${RESET}" | tee -a "$LOG"
             execute_script "dotfiles-main.sh"
+            ;;
+        dev_env)
+            echo "${INFO} Installing ${SKY_BLUE}development environment...${RESET}" | tee -a "$LOG"
+            execute_script "dev-environment.sh"
             ;;
         *)
             echo "Unknown option: $option" | tee -a "$LOG"
